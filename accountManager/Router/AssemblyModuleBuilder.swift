@@ -19,7 +19,7 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let mainView = MainViewController()
-        let presenter = MainPresenter(view: mainView)
+        let presenter = MainPresenter(view: mainView, router: router)
         mainView.presenter = presenter
         return mainView
     }

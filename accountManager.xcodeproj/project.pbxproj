@@ -19,7 +19,7 @@
 		1357F36427DC45680060B5FF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357F36327DC45680060B5FF /* NetworkService.swift */; };
 		13D440AC27D5324800496C4F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D440AB27D5324800496C4F /* UserDataModel.swift */; };
 		13D440AE27D5325900496C4F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D440AD27D5325900496C4F /* AuthPresenter.swift */; };
-		13F8A6C527DE6D120015113C /* AssemblyBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8A6C427DE6D120015113C /* AssemblyBuilderProtocol.swift */; };
+		13F8A6C527DE6D120015113C /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8A6C427DE6D120015113C /* AssemblyModuleBuilder.swift */; };
 		13F8A6C727DE6D610015113C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8A6C627DE6D610015113C /* MainRouter.swift */; };
 		CF96ED7907CB27B1F05F0787 /* Pods_accountManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3069A71DE8630FF78184E1 /* Pods_accountManager.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,7 @@
 		1357F36327DC45680060B5FF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		13D440AB27D5324800496C4F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		13D440AD27D5325900496C4F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
-		13F8A6C427DE6D120015113C /* AssemblyBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilderProtocol.swift; sourceTree = "<group>"; };
+		13F8A6C427DE6D120015113C /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		13F8A6C627DE6D610015113C /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		1B21984E13789D1B5AF12EC8 /* Pods-accountManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-accountManager.release.xcconfig"; path = "Target Support Files/Pods-accountManager/Pods-accountManager.release.xcconfig"; sourceTree = "<group>"; };
 		8D0F48827DC7458AC28B9690 /* Pods-accountManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-accountManager.debug.xcconfig"; path = "Target Support Files/Pods-accountManager/Pods-accountManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		13F8A6C327DE6CF00015113C /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				13F8A6C427DE6D120015113C /* AssemblyBuilderProtocol.swift */,
+				13F8A6C427DE6D120015113C /* AssemblyModuleBuilder.swift */,
 				13F8A6C627DE6D610015113C /* MainRouter.swift */,
 			);
 			path = Router;
@@ -327,7 +327,7 @@
 			files = (
 				131F86B727D3DC56009C8B6A /* AuthViewController.swift in Sources */,
 				13D440AE27D5325900496C4F /* AuthPresenter.swift in Sources */,
-				13F8A6C527DE6D120015113C /* AssemblyBuilderProtocol.swift in Sources */,
+				13F8A6C527DE6D120015113C /* AssemblyModuleBuilder.swift in Sources */,
 				1357F36427DC45680060B5FF /* NetworkService.swift in Sources */,
 				131F86A327D3DB63009C8B6A /* MainViewController.swift in Sources */,
 				13F8A6C727DE6D610015113C /* MainRouter.swift in Sources */,

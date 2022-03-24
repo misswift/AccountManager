@@ -22,8 +22,9 @@ class MainPresenter: MainViewPresenterProtocol {
         var view: MainViewProtocol?
         var router: RouterProtocol?
         var userData: [UserData]?
-        init (view: MainViewProtocol){
+        init (view: MainViewProtocol, router: RouterProtocol? ){
             self.view = view
+            self.router = router
         }
         
         func createAuthScreen() {
