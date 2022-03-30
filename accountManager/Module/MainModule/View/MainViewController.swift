@@ -44,11 +44,11 @@ class MainViewController: UIViewController {
     
     
     @objc func registrationButtonTap() {
-        presenter?.createAuthScreen()
+       
     }
     
     @objc func comeButtonTap() {
-       
+        presenter?.createAuthScreen()
     }
     
     

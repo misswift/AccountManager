@@ -15,18 +15,25 @@ protocol AuthViewProtocol: AnyObject {
 
 protocol AuthViewPresenterProtocol: AnyObject {
     func getUserData()
+    func openInitialVC()
 }
 
 class AuthPresenter: AuthViewPresenterProtocol {
     
     weak var view: AuthViewProtocol?
     let networkService: NetworkServiceProtocol!
+    var router: RouterProtocol?
     var userData: [UserData]?
-    init (view: AuthViewProtocol, networkService: NetworkServiceProtocol, userInfo: String ){
+    init (view: AuthViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, userInfo: String){
         self.view = view
         self.networkService = networkService
+        self.router = router
     }
     
+    func openInitialVC () {
+        router?.dismiss()
+        router?.initialViewController()
+    }
     func getUserData() {
 //        networkService.getAuthData {  [weak self] result in
 //            guard let self = self else {return}

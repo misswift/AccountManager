@@ -27,8 +27,7 @@ final class Router: RouterProtocol {
     
     var navigationController: UINavigationController?
     var assemblyBuilder: AssemblyBuilderProtocol?
-    
-    init (navigationController: UINavigationController, assemblyBuilder: AssemblyBuilderProtocol){
+        init (navigationController: UINavigationController, assemblyBuilder: AssemblyBuilderProtocol){
         self.assemblyBuilder = assemblyBuilder
         self.navigationController = navigationController
         
@@ -50,7 +49,7 @@ final class Router: RouterProtocol {
     func openAuthScreen( userInfo: String) {
         if let navigationController = self.navigationController {
             guard let authVC = assemblyBuilder?.createAuthModule(router: self, userInfo: userInfo) else { return }
-            navigationController.navigationBar.isHidden = true
+            navigationController.navigationBar.isHidden = false
             navigationController.viewControllers = [authVC]
         }
     }

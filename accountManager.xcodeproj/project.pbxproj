@@ -58,6 +58,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1300926527F1A3A20057E807 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1300926627F1A3B10057E807 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				1357F36327DC45680060B5FF /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 		131EC6D027E70D5100333FF0 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +178,8 @@
 		1357F36227DC45310060B5FF /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
-				1357F36327DC45680060B5FF /* NetworkService.swift */,
+				1300926627F1A3B10057E807 /* NetworkService */,
+				1300926527F1A3A20057E807 /* Service */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";

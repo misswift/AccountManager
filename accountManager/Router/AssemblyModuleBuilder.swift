@@ -31,7 +31,7 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     func createAuthModule(router: RouterProtocol, userInfo: String) -> UIViewController {
         let authView = AuthViewController()
         let authViewService = NetworkService()
-        let presenter = AuthPresenter(view: authView, networkService: authViewService, userInfo: userInfo)
+        let presenter = AuthPresenter(view: authView, networkService: authViewService, router: router, userInfo: userInfo)
         authView.presenter = presenter
         return authView
         
