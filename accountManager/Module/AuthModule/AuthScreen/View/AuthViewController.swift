@@ -35,18 +35,54 @@ class AuthViewController: UIViewController {
         return textField
     }()
     
+    private lazy var registrationButton: UIButton = {
+     let btn = UIButton()
+        btn.setTitle("Перейти к регистрации", for: .normal)
+        btn.setTitleColor(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), for: .normal)
+        btn.addTarget(self, action: #selector(registrationButtonTap), for:.touchUpInside )
+        return btn
+    }()
     
+    private lazy var comeInButton: UIButton = {
+     let btn = UIButton()
+        btn.setTitle("Войти", for: .normal)
+        btn.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
+        btn.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        btn.layer.cornerRadius = 10
+        btn.clipsToBounds = true
+        btn.addTarget(self, action: #selector(comeInButtonTap), for:.touchUpInside )
+        return btn
+    }()
     func insertView(){
-        [authLoginTextField, authPaswordTextField].forEach { view.addSubview($0) }
+        [authLoginTextField, authPaswordTextField, registrationButton, comeInButton].forEach { view.addSubview($0) }
         authLoginTextField.snp.makeConstraints {
             $0.top.equalToSuperview().offset(200)
-            $0.trailing.leading.equalToSuperview().offset(16)
+            $0.trailing.leading.equalToSuperview().offset(36)
         }
         authPaswordTextField.snp.makeConstraints {
             $0.top.equalTo(authLoginTextField.snp.bottom).offset(50)
-            $0.trailing.leading.equalToSuperview().offset(16)
-            
-        }}
+            $0.trailing.leading.equalToSuperview().offset(36)
+        }
+        registrationButton.snp.makeConstraints {
+            $0.top.equalTo(authPaswordTextField.snp.bottom).offset(50)
+            $0.trailing.leading.equalToSuperview().inset(36)
+            $0.height.equalTo(44)
+
+        }
+        comeInButton.snp.makeConstraints {
+            $0.top.equalTo(registrationButton.snp.bottom).offset(50)
+            $0.trailing.leading.equalToSuperview().inset(36)
+            $0.height.equalTo(44)
+        }
+    }
+    
+    @objc func registrationButtonTap (){
+        
+    }
+    
+    @objc func comeInButtonTap (){
+        
+    }
 }
 
 extension AuthViewController: AuthViewProtocol {

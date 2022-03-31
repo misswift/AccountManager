@@ -66,14 +66,14 @@ class MainViewController: UIViewController {
             $0.bottom.equalTo(registrationButton.snp.top).offset(-50)
             $0.leading.equalToSuperview().offset(36)
             $0.trailing.equalToSuperview().inset(36)
-            $0.height.equalTo(50)
+            $0.height.equalTo(44)
         }
         
         registrationButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-16)
             $0.leading.equalToSuperview().offset(36)
             $0.trailing.equalToSuperview().inset(36)
-            $0.height.equalTo(50)
+            $0.height.equalTo(44)
         }
     }
     

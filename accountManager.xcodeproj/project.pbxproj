@@ -17,6 +17,7 @@
 		131F86AE27D3DB66009C8B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131F86AC27D3DB66009C8B6A /* LaunchScreen.storyboard */; };
 		131F86B727D3DC56009C8B6A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F86B627D3DC56009C8B6A /* AuthViewController.swift */; };
 		1357F36427DC45680060B5FF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357F36327DC45680060B5FF /* NetworkService.swift */; };
+		13D2909027F5AECF004834A9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D2908F27F5AECF004834A9 /* DataService.swift */; };
 		13D440AC27D5324800496C4F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D440AB27D5324800496C4F /* UserDataModel.swift */; };
 		13D440AE27D5325900496C4F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D440AD27D5325900496C4F /* AuthPresenter.swift */; };
 		13F8A6C527DE6D120015113C /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8A6C427DE6D120015113C /* AssemblyModuleBuilder.swift */; };
@@ -37,6 +38,7 @@
 		131F86AF27D3DB66009C8B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		131F86B627D3DC56009C8B6A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		1357F36327DC45680060B5FF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		13D2908F27F5AECF004834A9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		13D440AB27D5324800496C4F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		13D440AD27D5325900496C4F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		13F8A6C427DE6D120015113C /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		1300926527F1A3A20057E807 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				13D2908F27F5AECF004834A9 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				131F86B727D3DC56009C8B6A /* AuthViewController.swift in Sources */,
 				13D440AE27D5325900496C4F /* AuthPresenter.swift in Sources */,
 				13F8A6C527DE6D120015113C /* AssemblyModuleBuilder.swift in Sources */,
+				13D2909027F5AECF004834A9 /* DataService.swift in Sources */,
 				1357F36427DC45680060B5FF /* NetworkService.swift in Sources */,
 				131F86A327D3DB63009C8B6A /* MainViewController.swift in Sources */,
 				13F8A6C727DE6D610015113C /* MainRouter.swift in Sources */,
