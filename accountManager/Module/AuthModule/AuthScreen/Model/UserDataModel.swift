@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct UserData: Decodable {
-    var name: String
-    var email: String
+struct UserDataModel: Decodable {
+    var login: String
+    var password: String
     
 }

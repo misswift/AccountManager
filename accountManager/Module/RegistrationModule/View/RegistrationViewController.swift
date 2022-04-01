@@ -1,20 +1,20 @@
 //
-//  Main.swift
+//  RegistrationView.swift
 //  accountManager
 //
-//  Created by Халим Магомедов on 05.03.2022.
+//  Created by Халим Магомедов on 01.04.2022.
 //
 
+import Foundation
 import UIKit
-import SnapKit
 
-class AuthViewController: UIViewController {
-    
-    var presenter: AuthViewPresenterProtocol!
+
+class RegistrationViewController: UIViewController {
+    var presenter: RegistrationPresenterProtocol!
     
     override func viewDidLoad() {
         view.backgroundColor = .white
-        self.title = "Вход по почте"
+        self.title = "Регистрация"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(openBackVC))
         insertView()
     }
@@ -39,7 +39,7 @@ class AuthViewController: UIViewController {
     
     private lazy var registrationButton: UIButton = {
      let btn = UIButton()
-        btn.setTitle("Перейти к регистрации", for: .normal)
+        btn.setTitle("Уже зарегистрирован", for: .normal)
         btn.setTitleColor(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), for: .normal)
         btn.addTarget(self, action: #selector(registrationButtonTap), for:.touchUpInside )
         return btn
@@ -85,27 +85,14 @@ class AuthViewController: UIViewController {
     @objc func comeInButtonTap (){
 
               if !isValidEmail(testStr: authLoginTextField.text!) {
-//                  SwiftSpinner.show("Adresse mail invalide", animated: false).addTapHandler({
-//                      SwiftSpinner.hide()
-//                  })
                   return
-    }
+                
+              }
     }
     
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
-    }
-}
-
-extension AuthViewController: AuthViewProtocol {
-    func success() {
-        print(1)
-    }
-    
-    func failure(error: Error) {
-        print(1)
-        
     }
 }
