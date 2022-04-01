@@ -9,27 +9,30 @@ import Foundation
 import UIKit
 import CoreData
 
-class NotesService : NSObject {
+protocol UserDataFetchServiceProtocol {
+    func saveUserData(login : String, password: String)
+    func getUserData() -> [Any]
+    func saveСontext()
+}
+
+class UserDataService: UserDataFetchServiceProtocol {
     
     var context : NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
     
-    func saveNote(text : String) {
+    func saveUserData(login : String, password: String) {
         let entity = NSEntityDescription.entity (forEntityName: "Notes", in: self.context)
-        let newNotes = NSManagedObject (entity: entity! , insertInto: self.context)
-        
-        let randomId = String(Int.random(in: 1000...10000))
-        
-        newNotes.setValue(text, forKey: "text")
-        newNotes.setValue(randomId, forKey: "id")
+        let newUserData = NSManagedObject (entity: entity! , insertInto: self.context)
+        newUserData.setValue(login, forKey: "login")
+        newUserData.setValue(password, forKey: "password")
         
         saveСontext()
     }
     
-    func getNotes() -> [Any]{
-        let request = NSFetchRequest <NSFetchRequestResult> (entityName: "Notes")
+    func getUserData() -> [Any]{
+        let request = NSFetchRequest <NSFetchRequestResult> (entityName: "UserData")
         request.returnsObjectsAsFaults = false
         do {
             return try context.fetch(request)
@@ -39,18 +42,6 @@ class NotesService : NSObject {
         }
     }
     
-//    func removeNote(note : Notes)  {
-//        context.delete(note)
-//        
-//        saveСontext()
-//    }
-//    
-//    func updateNote(note : Notes, text : String) {
-//        
-//        note.setValue(text, forKey: "text")
-//        
-//        saveСontext()
-//    }
     
     func saveСontext() {
         do {

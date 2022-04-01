@@ -20,12 +20,12 @@ protocol RegistrationPresenterProtocol: AnyObject {
 class RegistrationPresenter: RegistrationPresenterProtocol {
     var userDataService: UserDataFetchServiceProtocol!
     weak var view: RegistrationViewProtocol?
-    let networkService: NetworkServiceProtocol!
+//    let networkService: NetworkServiceProtocol!
     var router: RouterProtocol?
     var userData: [UserData]?
-    init (view: RegistrationViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, userInfo: String, userDataService: UserDataFetchServiceProtocol){
+    init (view: RegistrationViewProtocol, router: RouterProtocol, userInfo: String, userDataService: UserDataFetchServiceProtocol){
         self.view = view
-        self.networkService = networkService
+//        self.networkService = networkService
         self.router = router
     }
 

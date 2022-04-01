@@ -10,6 +10,7 @@ import UIKit
 protocol AssemblyBuilderProtocol: AnyObject {
     func createMainModule(router: RouterProtocol) -> UIViewController
     func createAuthModule(router: RouterProtocol, userInfo: String) -> UIViewController
+    func createRegistrationModule(router: RouterProtocol, userInfo: String) -> UIViewController
 }
 
 final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
@@ -37,5 +38,16 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
         
     }
     
+    // MARK: - CreateRegistrationModule
+    
+    func createRegistrationModule(router: RouterProtocol, userInfo: String) -> UIViewController {
+        let registrationView = RegistrationViewController()
+        let registrationService = UserDataService()
+        let presenter = RegistrationPresenter(view: registrationView, router: router, userInfo: userInfo, userDataService: registrationService)
+        registrationView.presenter = presenter
+        return registrationView
+        
+    }
+
     
 }

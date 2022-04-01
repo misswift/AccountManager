@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
     
     
     @objc func registrationButtonTap() {
-       
+        presenter?.createRegistrationScreen()
     }
     
     @objc func comeButtonTap() {

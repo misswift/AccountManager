@@ -16,6 +16,8 @@
 		131F86AB27D3DB66009C8B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 131F86AA27D3DB66009C8B6A /* Assets.xcassets */; };
 		131F86AE27D3DB66009C8B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131F86AC27D3DB66009C8B6A /* LaunchScreen.storyboard */; };
 		131F86B727D3DC56009C8B6A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F86B627D3DC56009C8B6A /* AuthViewController.swift */; };
+		1357556C27F71B9A00A00E0B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357556B27F71B9A00A00E0B /* RegistrationViewController.swift */; };
+		1357556E27F71BB000A00E0B /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357556D27F71BB000A00E0B /* RegistrationPresenter.swift */; };
 		1357F36427DC45680060B5FF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357F36327DC45680060B5FF /* NetworkService.swift */; };
 		13D2909027F5AECF004834A9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D2908F27F5AECF004834A9 /* DataService.swift */; };
 		13D440AC27D5324800496C4F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D440AB27D5324800496C4F /* UserDataModel.swift */; };
@@ -37,6 +39,8 @@
 		131F86AD27D3DB66009C8B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		131F86AF27D3DB66009C8B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		131F86B627D3DC56009C8B6A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		1357556B27F71B9A00A00E0B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		1357556D27F71BB000A00E0B /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		1357F36327DC45680060B5FF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		13D2908F27F5AECF004834A9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		13D440AB27D5324800496C4F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			children = (
 				131EC6D027E70D5100333FF0 /* MainModule */,
 				131F86B527D3DC16009C8B6A /* AuthModule */,
+				1357556727F71B3E00A00E0B /* RegistrationModule */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -174,6 +179,39 @@
 			isa = PBXGroup;
 			children = (
 				13D440AD27D5325900496C4F /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1357556727F71B3E00A00E0B /* RegistrationModule */ = {
+			isa = PBXGroup;
+			children = (
+				1357556827F71B5300A00E0B /* Model */,
+				1357556927F71B5A00A00E0B /* View */,
+				1357556A27F71B6100A00E0B /* Presenter */,
+			);
+			path = RegistrationModule;
+			sourceTree = "<group>";
+		};
+		1357556827F71B5300A00E0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1357556927F71B5A00A00E0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1357556B27F71B9A00A00E0B /* RegistrationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1357556A27F71B6100A00E0B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1357556D27F71BB000A00E0B /* RegistrationPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -347,9 +385,11 @@
 				131F86B727D3DC56009C8B6A /* AuthViewController.swift in Sources */,
 				13D440AE27D5325900496C4F /* AuthPresenter.swift in Sources */,
 				13F8A6C527DE6D120015113C /* AssemblyModuleBuilder.swift in Sources */,
+				1357556C27F71B9A00A00E0B /* RegistrationViewController.swift in Sources */,
 				13D2909027F5AECF004834A9 /* DataService.swift in Sources */,
 				1357F36427DC45680060B5FF /* NetworkService.swift in Sources */,
 				131F86A327D3DB63009C8B6A /* MainViewController.swift in Sources */,
+				1357556E27F71BB000A00E0B /* RegistrationPresenter.swift in Sources */,
 				13F8A6C727DE6D610015113C /* MainRouter.swift in Sources */,
 				131F869F27D3DB63009C8B6A /* AppDelegate.swift in Sources */,
 				13D440AC27D5324800496C4F /* UserDataModel.swift in Sources */,

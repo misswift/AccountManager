@@ -52,7 +52,7 @@ class RegistrationViewController: UIViewController {
         btn.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         btn.layer.cornerRadius = 10
         btn.clipsToBounds = true
-        btn.addTarget(self, action: #selector(comeInButtonTap), for:.touchUpInside )
+        btn.addTarget(self, action: #selector(saveButtonTap), for:.touchUpInside )
         return btn
     }()
     func insertView(){
@@ -78,16 +78,15 @@ class RegistrationViewController: UIViewController {
         }
     }
     
-    @objc func registrationButtonTap (){
+    @objc func registrationButtonTap(){
         presenter.openInitialVC()
     }
     
-    @objc func comeInButtonTap (){
-
-              if !isValidEmail(testStr: authLoginTextField.text!) {
+    @objc func saveButtonTap(){
+       if !isValidEmail(testStr: authLoginTextField.text!) {
+        presenter.saveUserData()
                   return
-                
-              }
+        }
     }
     
     func isValidEmail(testStr:String) -> Bool {
@@ -95,4 +94,17 @@ class RegistrationViewController: UIViewController {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
+}
+
+
+extension RegistrationViewController: RegistrationViewProtocol {
+    func success() {
+//        <#code#>
+    }
+    
+    func failure(error: Error) {
+//        <#code#>
+    }
+    
+    
 }

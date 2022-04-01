@@ -8,11 +8,12 @@
 import Foundation
 
 protocol NetworkServiceProtocol: AnyObject  {
-    func getAuthData (completion: @escaping (Result<[UserData]?, Error>) -> Void)
+    func getAuthData (completion: @escaping (Result<[UserDataModel]?, Error>) -> Void)
 }
 
 class NetworkService: NetworkServiceProtocol {
-    func getAuthData(completion: @escaping (Result<[UserData]?, Error>) -> Void) {
+    
+    func getAuthData(completion: @escaping (Result<[UserDataModel]?, Error>) -> Void) {
         let urlString = ""
         guard let url = URL(string: urlString) else {
             return
@@ -23,7 +24,7 @@ class NetworkService: NetworkServiceProtocol {
                 return
             }
             do {
-                let obj = try JSONDecoder().decode([UserData].self, from: data!)
+                let obj = try JSONDecoder().decode([UserDataModel].self, from: data!)
                 completion(.success(obj))
             } catch {
                 completion(.failure(error))

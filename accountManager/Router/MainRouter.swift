@@ -20,6 +20,7 @@ protocol RouterProtocol: MainRouterProtocol {
     func dismiss()
     func openAuthScreen(userInfo: String)
     func initialViewController()
+    func openRegistrationScreen( userInfo: String)
     
 }
 
@@ -51,6 +52,14 @@ final class Router: RouterProtocol {
             guard let authVC = assemblyBuilder?.createAuthModule(router: self, userInfo: userInfo) else { return }
             navigationController.navigationBar.isHidden = false
             navigationController.viewControllers = [authVC]
+        }
+    }
+    
+    func openRegistrationScreen( userInfo: String) {
+        if let navigationController = self.navigationController {
+            guard let regVC = assemblyBuilder?.createRegistrationModule(router: self, userInfo: userInfo) else { return }
+            navigationController.navigationBar.isHidden = false
+            navigationController.viewControllers = [regVC]
         }
     }
     

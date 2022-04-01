@@ -14,10 +14,13 @@ protocol MainViewProtocol: AnyObject  {
 
 protocol MainViewPresenterProtocol: AnyObject  {
     func createAuthScreen()
+    func createRegistrationScreen()
 }
         
     
 class MainPresenter: MainViewPresenterProtocol {
+
+    
         
         var view: MainViewProtocol?
         var router: RouterProtocol?
@@ -30,6 +33,11 @@ class MainPresenter: MainViewPresenterProtocol {
         func createAuthScreen() {
             router?.dismiss()
             router?.openAuthScreen(userInfo: "")
+    }
+    
+    func createRegistrationScreen() {
+        router?.dismiss()
+        router?.openRegistrationScreen(userInfo: "")
     }
 
 }
